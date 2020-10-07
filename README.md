@@ -24,6 +24,7 @@ served fairness. Hence, this type of lock is
 only suitable for educational purposes.
 
 ```java
+lock():
 1. When thread wants to access critical
    section, it tries to engage lock, for
    itself, with an atomic operation. This
@@ -34,6 +35,7 @@ only suitable for educational purposes.
 ```
 
 ```java
+unlock():
 1. When a thread is done with its critical
    section, it simply sets the "locked" state
    to false.

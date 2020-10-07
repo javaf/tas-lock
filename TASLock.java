@@ -1,5 +1,3 @@
-import java.util.concurrent.*;
-import java.util.concurrent.locks.*;
 import java.util.concurrent.atomic.*;
 
 // Test-and-set Lock uses an atomic value for
@@ -27,7 +25,7 @@ import java.util.concurrent.atomic.*;
 // served fairness. Hence, this type of lock is
 // only suitable for educational purposes.
 
-class TASLock implements Lock {
+class TASLock extends AbstractLock {
   AtomicBoolean locked;
   // locked: indicates if lock is engaged
 
@@ -53,27 +51,5 @@ class TASLock implements Lock {
   @Override
   public void unlock() {
     locked.set(false); // 1
-  }
-
-  @Override
-  public void lockInterruptibly() throws InterruptedException {
-    lock();
-  }
-
-  @Override
-  public boolean tryLock() {
-    lock();
-    return true;
-  }
-
-  @Override
-  public boolean tryLock(long arg0, TimeUnit arg1) throws InterruptedException {
-    lock();
-    return true;
-  }
-
-  @Override
-  public Condition newCondition() {
-    return null;
   }
 }
