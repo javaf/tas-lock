@@ -23,6 +23,11 @@ this scheme does not provide first-come-first-
 served fairness. Hence, this type of lock is
 only suitable for educational purposes.
 
+> **Course**: [Concurrent Data Structures], Monsoon 2020\
+> **Taught by**: Prof. Govindarajulu Regeti
+
+[Concurrent Data Structures]: https://github.com/iiithf/concurrent-data-structures
+
 ```java
 lock():
 1. When thread wants to access critical
